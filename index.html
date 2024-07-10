@@ -3,15 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-    <style>body{background-color:powderblue}</style>
     <title>Gold Assassin Studios</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #243B55, #141E30);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        .container {
+            text-align: center;
+            padding: 100px 20px 20px 20px;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .games {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: left;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <div class="w3-center">
+    <div class="container" id="home">
         <h1>Gold Assassin Studios</h1>
         <p><i>Where creativity connects with ease.</i></p>
-        <a class="w3-button w3-blue w3-hover-light-blue w3-round" href="https://www.roblox.com/groups/34357157/Gold-Assassin-Studios">Our Group</a>
+        <a class="button" href="https://www.roblox.com/groups/34357157/Gold-Assassin-Studios">Our Group</a>
     </div>
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>Gold Assassin Studios is a place where creativity meets innovation. We specialize in creating immersive gaming experiences on the Roblox platform. Our team of dedicated developers and designers work tirelessly to bring new and exciting games to life.</p>
+    </div>
+    <div class="section" id="games">
+        <h2>Our Games</h2>
+        <div class="games">
+            <div class="game-card">
+                <img src="https://tr.rbxcdn.com/8b848a978b84d7af4dc5337ec083a0eb/512/512/Image/Webp" alt="Developer's Toolbox">
+                <h3>Developer's Toolbox</h3>
+                <p>Get free, professional scripts for your game that you can import right away!</p>
+            </div>
+            <div class="game-card">
+                <img src="https://tr.rbxcdn.com/33958100090e6ed413a28ce2d3cbfcb9/512/512/Image/Webp" alt="Gold Assassin ePortal">
+                <h3>Gold Assassin ePortal</h3>
+                <p>Purchase high quality assets with no-viruses guarrancy.</p>
+            </div>
+            <div class="game-card" style="display: none">
+                <img src="game3.jpg" alt="Game 3">
+                <h3>Game Title 3</h3>
+                <p>Brief description of Game 3.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gold Assassin Studios. Apache License 2.0.</p>
+    </footer>
 </body>
 </html>
